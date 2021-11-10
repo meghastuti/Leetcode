@@ -1,0 +1,15 @@
+class Solution {
+    public int rangeBitwiseAnd(int left, int right) {
+       if(left==right)
+         return left;
+       while(left < right){
+          right = right & right-1;
+       }
+        //System.out.println(left & right);
+        return left & right;
+    }
+    public static void main(String[] args)
+    {
+       int left = 10, right = 15;
+    }
+}
